@@ -1,0 +1,8 @@
+body, p, td{
+    font-family: Tahoma;
+    font-size: 8pt;
+}
+
+td{
+    vertical-align: top;
+}

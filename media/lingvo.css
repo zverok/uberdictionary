@@ -1,0 +1,122 @@
+/* card controls */
+div.lol-card-panel {
+	float:right;
+	color:#999;
+	padding-left: 5px;
+}
+span.lol-dict-name {
+	color:#003366;
+	margin-left:20px;
+}
+span.lol-view-current, span.lol-dict-change {
+	color:#666;
+	font-size:90%;
+}
+a.lol-view-change {
+	font-size:90%;
+}
+a.lol-view-change:link, a.lol-view-change:visited, a.lol-dict-change:link, a.lol-dict-change:visited {
+	border-bottom:1px #999 dashed;
+	text-decoration:none;
+	color:#999;
+}
+a.lol-view-change:hover, a.lol-dict-change:hover {
+	border-bottom:1px #999 solid;
+	text-decoration:none;
+	color:#666;
+}
+
+/* card content */
+.lol-card {
+	border-top:1px solid #ccc;
+	margin:0.5em 0;
+	padding:10px 5px 5px;
+}
+.lol-card.first {
+	border-top: 0;
+}
+
+/* card content layout */
+td.lol-cards p {
+	margin:0; padding:0;
+}
+.P img {
+    position:relative;
+    margin-top: 3px;
+    *margin-top: 0;
+    bottom: 3px;
+    *position: inherit;
+    *bottom: 0;
+	vertical-align: middle;
+}
+td.lol-cards p.P1 {
+	margin-left: 1em;
+}
+td.lol-cards p.P2 {
+	margin-left: 2em;
+}
+td.lol-cards p.P3 {
+	margin-left: 3em;
+}
+td.lol-cards p.P4 {
+	margin-left: 4em;
+}
+td.lol-cards p.P5 {
+	margin-left: 5em;
+}
+td.lol-cards p.P6 {
+	margin-left: 6em;
+}
+td.lol-cards p.P7 {
+	margin-left: 7em;
+}
+td.lol-cards p.P8 {
+	margin-left: 8em;
+}
+td.lol-cards p.P9 {
+	margin-left: 9em;
+}
+span.example {
+	color:#666;
+}
+span.translation {
+
+}
+span.translation img {
+    position:relative;
+    top:3px;
+}
+span.comment {
+}
+span.Abbrev {
+	cursor:help;
+	font-style:italic;
+	color:#0C6;
+}
+
+span.Bold {
+	 font-weight:bold;
+}
+span.Italic {
+	 font-style:italic;
+}
+span.Underline {
+	 text-decoration:underline;
+}
+span.Accent {
+	color:#F00;
+}
+span.Subscript {
+	 vertical-align:sub;
+	font-size:smaller;
+}
+span.Superscript {
+	 vertical-align:super;
+	font-size:smaller;
+}
+span.Highlight {
+	 background:#ccc;
+}
+span.BesHit {
+	 background:#ccc;
+}
