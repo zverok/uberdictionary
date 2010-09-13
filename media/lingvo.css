@@ -37,7 +37,7 @@ a.lol-view-change:hover, a.lol-dict-change:hover {
 }
 
 /* card content layout */
-td.lol-cards p {
+div#Lingvo p {
 	margin:0; padding:0;
 }
 .P img {
@@ -49,31 +49,31 @@ td.lol-cards p {
     *bottom: 0;
 	vertical-align: middle;
 }
-td.lol-cards p.P1 {
+div#Lingvo p.P1 {
 	margin-left: 1em;
 }
-td.lol-cards p.P2 {
+div#Lingvo p.P2 {
 	margin-left: 2em;
 }
-td.lol-cards p.P3 {
+div#Lingvo p.P3 {
 	margin-left: 3em;
 }
-td.lol-cards p.P4 {
+div#Lingvo p.P4 {
 	margin-left: 4em;
 }
-td.lol-cards p.P5 {
+div#Lingvo p.P5 {
 	margin-left: 5em;
 }
-td.lol-cards p.P6 {
+div#Lingvo p.P6 {
 	margin-left: 6em;
 }
-td.lol-cards p.P7 {
+div#Lingvo p.P7 {
 	margin-left: 7em;
 }
-td.lol-cards p.P8 {
+div#Lingvo p.P8 {
 	margin-left: 8em;
 }
-td.lol-cards p.P9 {
+div#Lingvo p.P9 {
 	margin-left: 9em;
 }
 span.example {
