@@ -45,19 +45,13 @@ GoogleTranslate = {
 }
 
 
-dictionaries = [Lingvo, Multitran, Wikipedia, GoogleTranslate];
 
-$(document).ready(function(){
-    var cleanup = function(html){
-        return html.
-            replace(/<\/?a.*?>/mg, '').
-            replace(/<img.*?>/mg, '');
-    };
+
+Uberdictionary = {
+    dictionaries: [Lingvo, Multitran, Wikipedia, GoogleTranslate],
     
-    $('[name=word]').focus();
-    $('form').submit(function(){
-        var word = $('[name=word]').val();
-        $.each(dictionaries, function(){
+    translate: function(word){
+        $.each(Uberdictionary.dictionaries, function(){
             var url = this.urlPattern.replace('%s', word);
             var dic = this;
             var target = $('#' + dic.title);
@@ -65,16 +59,29 @@ $(document).ready(function(){
                 var res = data.results[0].
                     replace(/<script[^>]+?\/>|<script(.|\s)*?\/script>/gi, '');
                 if(dic.kind == 'json'){
-                    //var json = '(' + res.match(/<body.*?>([\s\S]+)<\/body>/im)[1] + ')';
                     var json = '(' + res.match(/(\{[\s\S]+\})/im)[1] + ')';
-                    console.log(json);
                     target.html(dic.extractContent(eval(json)));
                 }else{
                     target.html(res.match(/<body.*?>([\s\S]+)<\/body>/im)[1]);
-                    target.html(cleanup(dic.extractContent(target)));
+                    target.html(Uberdictionary.cleanup(dic.extractContent(target)));
                 }
             });
         });
+    },
+    
+    cleanup: function(html){
+        return html.
+            replace(/<\/?a.*?>/mg, '').
+            replace(/<img.*?>/mg, '');
+    }
+}
+
+$(document).ready(function(){
+    $('[name=word]').focus();
+    $('form').submit(function(){
+        Uberdictionary.translate($('[name=word]').val());
+        $('[name=word]').focus();
+        $('[name=word]').select();
         return false;
     });
 });
