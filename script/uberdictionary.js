@@ -72,4 +72,15 @@ $(document).ready(function(){
         Uberdictionary.translate();
         return false;
     });
+    
+    showdown = new Showdown.converter();
+    
+    $('#aboutDialog').dialog({autoOpen: false, modal: true, title: "О скрипте"})
+    $('a#about').click(function(){
+        $.get('./README.md', function(data){
+            $('#aboutDialog').html(showdown.makeHtml(data))
+            $('#aboutDialog').dialog('open')
+        })
+        return false;
+    });
 });
